@@ -1,0 +1,20 @@
+.title2 {
+  font-size: 48px;
+  line-height: math.div(52, 48);
+  letter-spacing: -0.02em;
+  @media (max-width: $tablet) {
+    font-size: 30px;
+  }
+}
+
+.decor {
+  svg {
+    width: 100%;
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

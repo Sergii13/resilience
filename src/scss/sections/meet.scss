@@ -1,0 +1,86 @@
+.meet {
+  padding: 75px 0;
+  @media (max-width: $tablet) {
+    padding: 40px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $tablet) {
+        margin-bottom: 80px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1288px;
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr
+    ));
+    gap: 27px;
+    position: relative;
+    @media (max-width: $tablet) {
+      gap: 40px 20px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    width: 857px;
+    z-index: -1;
+    top: -193px;
+    left: calc(100% - 484px);
+    @media (max-width: em(1200)) {
+      display: none;
+
+    }
+  }
+}
+
+
+.meet-card {
+  border-radius: 8px;
+
+  &:hover {
+    .meet-card__title {
+      color: var(--orange);
+    }
+  }
+
+  &__image-ibg {
+    height: 218px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding-top: 30px;
+  }
+
+  &__label {
+    font-weight: 300;
+    line-height: math.div(24, 16);
+    color: var(--gray);
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    font-size: 24px;
+    line-height: math.div(26, 24);
+    letter-spacing: -0.02em;
+  }
+}

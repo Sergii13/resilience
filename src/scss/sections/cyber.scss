@@ -1,0 +1,122 @@
+.cyber {
+  padding-bottom: 150px;
+  @media (max-width: $mobile) {
+    padding-bottom: 90px;
+  }
+
+  &__wrap {
+    padding: 100px 50px;
+    background: var(--tan);
+    border-radius: 16px;
+    position: relative;
+    @media (max-width: $tablet) {
+      padding: 60px 30px;
+    }
+    @media (max-width: $mobile) {
+      padding: 76px 20px;
+    }
+  }
+
+  &__row {
+    max-width: 970px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 17px;
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      gap: 24px;
+    }
+  }
+
+  &__decor-big {
+    position: absolute;
+    z-index: -1;
+    width: 717px;
+    top: -72px;
+    left: -231px;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__decor-big2 {
+    position: absolute;
+    z-index: -1;
+    width: 215px;
+    top: -286px;
+    right: -80px;
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      top: -220px;
+      right: -138px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+
+    &_1 {
+      height: 48px;
+      bottom: 0;
+      left: 0;
+      width: 395px;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_2 {
+      width: 571px;
+      top: 0;
+      right: 0;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_3 {
+      bottom: 0;
+      left: 0;
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      @media (max-width: $mobile) {
+        width: 88px;
+        bottom: -30px;
+        left: -30px;
+      }
+    }
+
+    &_4 {
+      right: -0px;
+      top: 0;
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      @media (max-width: $mobile) {
+        width: 97px;
+        top: -40px;
+        right: -20px;
+      }
+    }
+  }
+
+  &__title {
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+  }
+}
