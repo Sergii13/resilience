@@ -4,6 +4,16 @@
     padding-bottom: 90px;
   }
 
+  &.pt-75 {
+    padding-top: 75px;
+    @media (max-width: $tablet) {
+      padding-top: 40px;
+    }
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+    }
+  }
+
   &__wrap {
     padding: 100px 50px;
     background: var(--tan);
@@ -59,6 +69,20 @@
     @media (max-width: $mobile) {
       top: -220px;
       right: -138px;
+    }
+  }
+
+  &__decor-big3 {
+    position: absolute;
+    z-index: -1;
+    width: 907px;
+    top: -131px;
+    left: -238px;
+    @media (max-width: $tablet) {
+      width: 700px;
+      left: auto;
+      right: 200px;
+      top: -200px;
     }
   }
 

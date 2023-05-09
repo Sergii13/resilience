@@ -1,0 +1,231 @@
+.compare2 {
+  padding: 105px 0 75px;
+  @media (max-width: $tablet) {
+    padding: 40px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 30px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: var(--gray);
+    @media (max-width: $tablet) {
+      gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 84px;
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .container {
+    max-width: 1078px;
+  }
+
+  &__title {
+    width: percent(466, 1078);
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    font-family: var(--font-allianz);
+  }
+
+  &__row {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    @media (max-width: $pc) {
+      gap: 30px;
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
+  &__item {
+  }
+
+  &__buttons-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 54px;
+    @media (max-width: $mobile) {
+      margin-top: 40px;
+    }
+  }
+
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      bottom: 24px;
+      left: 50%;
+      width: 886px;
+      transform: translateX(-50%);
+      @media (max-width: $mobile) {
+        width: 102vw;
+      }
+    }
+  }
+
+  &__button {
+  }
+}
+
+
+.item-compare2 {
+  background: #FBFAF9;
+  border: 1.5px solid #E2E6E0;
+  border-radius: 8px;
+  padding: 80px 40px;
+  overflow: hidden;
+  @media (max-width: $mobile) {
+    padding: 50px 20px;
+  }
+
+  &_dark {
+    background: var(--charcoal);
+    padding: 94px 40px;
+    position: relative;
+    @media (max-width: $mobile) {
+      padding: 50px 20px;
+    }
+
+    &::before {
+      content: '';
+      border-radius: 10px;
+      position: absolute;
+      left: 20px;
+      width: calc(100% - 40px);
+      top: 25px;
+      height: 100%;
+      border: 1.5px solid var(--black);
+      pointer-events: none;
+      @media (max-width: $mobile) {
+        width: calc(100% - 20px);
+        top: 15px;
+        left: 10px;
+      }
+    }
+
+
+    &::after {
+      content: '';
+      height: 1.5px;
+      bottom: 22px;
+      left: 0;
+      width: 100%;
+      background: var(--black);
+      position: absolute;
+    }
+
+    .item-compare2__content {
+      color: var(--white);
+    }
+
+    .item-compare2__title {
+      border-bottom: 1px solid var(--black);
+
+      h4 {
+        display: inline-block;
+        text-transform: capitalize;
+        color: #283220;
+        padding: 14.5px 32px;
+        background: var(--white);
+        border-radius: 90px;
+        @media (max-width: $mobile) {
+          padding: 10px 24px;
+        }
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+
+    &_1 {
+      bottom: 0;
+      left: 0;
+      @media (max-width: $mobile) {
+        width: 100px;
+      }
+    }
+
+    &_2 {
+      top: 0;
+      right: 0;
+      @media (max-width: $mobile) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid var(--tan);
+    padding-bottom: 26px;
+    font-size: 24px;
+    line-height: math.div(30, 24);
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: math.div(24, 16);
+    color: var(--gray);
+    position: relative;
+    z-index: 2;
+
+    ul {
+      li {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+
+        img {
+          width: 22px;
+          height: 22px;
+          flex-shrink: 0
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+}
+
+.decor {
+}
+
+.button-primary {
+}

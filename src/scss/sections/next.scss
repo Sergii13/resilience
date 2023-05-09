@@ -30,9 +30,7 @@
         width: 660px;
       }
       @media (max-width: $mobile) {
-        top: -91px;
-        right: 100%;
-        transform: translateX(74px);
+        display: none;
       }
     }
 
@@ -52,9 +50,18 @@
         left: auto;
       }
       @media (max-width: $mobile) {
-        width: 700px;
+        display: none;
       }
 
+    }
+
+    &_3 {
+      top: -80px;
+      left: -146px;
+      width: 220px;
+      @media (min-width: $mobile) {
+        display: none;
+      }
     }
   }
 

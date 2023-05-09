@@ -10,7 +10,7 @@ allAnimations.forEach((element) => {
     scrollTrigger: {
       trigger: element.closest(".decor"),
       start: element.dataset.animate === "top" ? "top 150px" : "top 100%",
-      end: "bottom -300px",
+      end: "bottom 200px",
       scrub: 1,
     },
     markers: { startColor: "green", endColor: "red", fontSize: "12px" },
@@ -31,7 +31,7 @@ allAnimations.forEach((element) => {
   ScrollTrigger.create({
     trigger: element,
     start: element.dataset.animate === "top" ? "top 150px" : "top 90%",
-    end: "bottom -300px",
+    end: "bottom 200px",
     scrub: 1,
   });
 });

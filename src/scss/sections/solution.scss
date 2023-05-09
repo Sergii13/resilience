@@ -3,9 +3,21 @@
   @media (max-width: $tablet) {
     padding: 80px 0 40px;
   }
+  position: relative;
 
   .container {
     max-width: 1288px;
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      width: 1216px;
+      bottom: 146px;
+      left: 0;
+    }
   }
 
   &__head {
@@ -29,9 +41,11 @@
   }
 
   &__title {
-    margin-bottom: 40px;
-    @media (max-width: $tablet) {
-      margin-bottom: 24px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -47,7 +61,7 @@
   &__grid-layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: 38px;
     @media (max-width: $tablet) {
       gap: 40px 30px;
       display: flex;
@@ -91,6 +105,15 @@
     }
   }
 
+  &__icon-big {
+    width: 113px;
+    height: 113px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__content {
     padding: 50px 40px 80px 40px;
     @media (max-width: $tablet) {
@@ -108,6 +131,7 @@
       font-weight: 400;
       line-height: math.div(24, 16);
       font-family: var(--font-allianz);
+      color: var(--gray);
     }
   }
 

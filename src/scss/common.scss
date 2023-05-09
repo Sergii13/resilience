@@ -7,6 +7,15 @@
   }
 }
 
+.title {
+  font-size: 56px;
+  line-height: math.div(61, 56);
+  letter-spacing: -0.025em;
+  @media (max-width: $tablet) {
+    font-size: 32px;
+  }
+}
+
 .decor {
   svg {
     width: 100%;
