@@ -7,6 +7,22 @@
     padding-bottom: 53px;
   }
 
+  &.pt-120 {
+    padding-top: 120px;
+    padding-bottom: 150px;
+    @media (max-width: $pc) {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+    @media (max-width: $tablet) {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+    @media (max-width: $mobile) {
+      padding-top: 50px;
+    }
+  }
+
   .container {
     position: relative;
   }
@@ -31,6 +47,16 @@
       }
       @media (max-width: $mobile) {
         display: none;
+      }
+    }
+
+    &_4 {
+      width: 744px;
+      left: calc(100% - 260px);
+      top: 347px;
+      @media (max-width: $tablet) {
+        top: auto;
+        bottom: -200px;
       }
     }
 

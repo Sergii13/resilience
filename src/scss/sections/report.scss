@@ -1,0 +1,136 @@
+.report {
+  padding: 150px 0;
+  overflow: hidden;
+  background: var(--grey-100);
+  @media (max-width: $pc) {
+    padding: 100px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 60px 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 20px;
+    @media (max-width: 1200px) {
+      gap: 30px;
+
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+
+    &_1 {
+      width: 840px;
+      top: -33px;
+      left: calc(100% - 150px);
+      @media (max-width: $tablet) {
+        width: 500px;
+      }
+    }
+
+    &_2 {
+      bottom: -65px;
+      width: 842px;
+      right: calc(100% - 340px);
+      @media (max-width: $tablet) {
+        width: 500px;
+        right: calc(100% - 140px);
+      }
+    }
+  }
+
+  &__image-ibg {
+    width: 462px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    align-self: stretch;
+    min-height: 500px;
+    @media (max-width: $tablet) {
+      max-width: 350px;
+      min-height: auto;
+      height: 400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 30px 50px 30px 0;
+    @media (max-width: $tablet) {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px 0px 30px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    line-height: math.div(24, 16);
+    color: var(--gray);
+    font-family: var(--font-allianz);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-weight: 700;
+      text-decoration: underline;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+  }
+}
+
+.container {
+}
+
+.decor {
+}
+
+.title2 {
+}
