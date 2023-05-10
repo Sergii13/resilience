@@ -1,0 +1,98 @@
+.value {
+  padding: 95px 0;
+  @media (max-width: $pc) {
+    padding: 70px 0;
+  }
+  @media (max-width: $tablet) {
+    padding: 65px 0;
+  }
+
+  &__title {
+    text-align: center;
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: 22px;
+    line-height: 150%;
+    text-align: center;
+    font-weight: 400;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+}
+
+.value-item {
+  background: var(--white);
+  border: 1.5px solid var(--tan);
+  border-radius: 8px;
+  padding: 48px 30px;
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-green);
+    border-radius: 50%;
+    border: 1px solid var(--black-main);
+
+    img {
+      max-height: 28px
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+  }
+
+  h4 {
+    font-size: 32px;
+    line-height: math.div(35, 32);
+    letter-spacing: -0.02em;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

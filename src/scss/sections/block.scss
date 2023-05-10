@@ -23,7 +23,7 @@
   }
 
   &__content {
-    width: percent(810, 1845);
+    width: percent(810, 1605);
     flex-shrink: 0;
     @media (max-width: $mobile) {
       margin-bottom: 60px;
@@ -51,6 +51,20 @@
         margin-bottom: 40px;
       }
     }
+  }
+
+  &__text {
+    margin-top: 24px;
+    font-size: 22px;
+    line-height: 150%;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+    max-width: 672px;
+    @media (max-width: $pc) {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
   }
 
   &__title {

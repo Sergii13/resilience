@@ -7,6 +7,35 @@
     padding: 50px 0 100px;
   }
 
+  &_another {
+    .team__content {
+      @media (max-width: $mobile) {
+        background: #F0EDEB;
+        border-radius: 16px;
+        padding: 33px 20px;
+      }
+    }
+
+    .team__image-ibg {
+      @media (max-width: $mobile) {
+        border-radius: 25.6859px;
+        img {
+          border-radius: 17.6859px;
+        }
+      }
+    }
+
+    .team__row {
+      @media (max-width: $mobile) {
+        background: transparent;
+        padding: 0;
+        gap: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
   &__row {
     display: flex;
     gap: 35px;

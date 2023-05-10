@@ -1,0 +1,161 @@
+.recent {
+  position: relative;
+  padding: 75px 0 150px;
+  @media (max-width: $pc) {
+    padding-bottom: 70px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 64px;
+  }
+
+  &__decor-line {
+    right: 150px;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    @media (max-width: $tablet) {
+      right: 80px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--tan);
+    }
+
+    &::before {
+      content: '';
+      border: 1px solid var(--tan);
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 10px;
+      transform: translateY(-50%);
+      height: 10px;
+      border-radius: 10px;
+      background: var(--white);
+      z-index: 2;
+    }
+  }
+
+  .container {
+    max-width: 1364px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: var(--gray);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 128px;
+      @media (max-width: $pc) {
+        margin-bottom: 100px;
+      }
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    width: percent(753, 1364);
+    flex-shrink: 0;
+    font-size: 22px;
+    line-height: 150%;
+    font-family: var(--font-allianz);
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 91px;
+    position: relative;
+    @media (max-width: $pc) {
+      gap: 38px;
+    }
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      width: 1400px;
+      bottom: -190px;
+      right: 211px;
+      @media (max-width: $tablet) {
+        right: 160px;
+        bottom: -290px;
+        width: 600px;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_2 {
+      width: 970px;
+      bottom: 20px;
+      left: 50%;
+      @media (max-width: $tablet) {
+        bottom: -65px;
+        left: 54%;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_3 {
+      bottom: 19px;
+      width: 190px;
+      left: -30px;
+
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+  }
+
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 64px;
+    @media (max-width: $tablet) {
+      margin-top: 50px;
+    }
+  }
+
+}
+

@@ -112,6 +112,7 @@ body {
 @if ($responsiveType==1) {
   // Чуйна
   .container {
+    box-sizing: content-box;
     @if ($maxWidthContainer>0) {
       max-width: rem($containerWidth);
       margin: 0 auto;
