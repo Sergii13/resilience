@@ -10,6 +10,71 @@
     padding-bottom: 130px;
   }
 
+  &_blog {
+    position: relative;
+    padding-bottom: 100px;
+    @media (max-width: $pc) {
+      background: #F0EDEB;
+    }
+    @media (max-width: $tablet) {
+      padding: 60px 0;
+    }
+    @media (max-width: $mobile) {
+      background: transparent;
+    }
+
+    .block__row {
+      align-items: flex-start;
+      @media (max-width: $tablet) {
+        align-items: center;
+      }
+      @media (max-width: $mobile) {
+        position: relative;
+        &::after {
+          content: '';
+          height: 200vh;
+          width: 170vw;
+          bottom: 35px;
+          position: absolute;
+          left: -30vw;
+          z-index: -1;
+          background: #F0EDEB;
+        }
+      }
+    }
+
+    .block__content {
+      padding-bottom: 115px;
+      padding-top: 30px;
+      position: relative;
+      @media (max-width: $pc) {
+        padding-bottom: 50px;
+      }
+      @media (max-width: $tablet) {
+        padding: 0;
+      }
+
+      &::after {
+        content: '';
+        height: 100vw;
+        width: 170vw;
+        bottom: 0;
+        position: absolute;
+        left: -30vw;
+        z-index: -1;
+        background: #F0EDEB;
+        @media (max-width: $pc) {
+          display: none;
+        }
+
+      }
+    }
+
+    .block__right {
+      background: var(--white);
+    }
+  }
+
   &__row {
     display: flex;
     align-items: center;
@@ -30,6 +95,16 @@
       width: 100%;
     }
 
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__socials {
+    margin-top: 40px;
   }
 
   &__subtitle {
@@ -60,6 +135,26 @@
     color: var(--gray);
     font-family: var(--font-allianz);
     max-width: 672px;
+
+    a {
+      text-decoration: underline;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
     @media (max-width: $pc) {
       font-size: 18px;
       margin-top: 30px;
