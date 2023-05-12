@@ -5,6 +5,10 @@
     padding: 100px 0 65px;
   }
 
+  &.pb-0 {
+    padding-bottom: 0;
+  }
+
   &_small {
     padding-top: 100px;
     @media (max-width: $tablet) {
@@ -185,6 +189,7 @@
     }
   }
 
+
   &__title {
     &:not(:last-child) {
       margin-bottom: 43px;
@@ -206,6 +211,10 @@
     @media (hover: hover) {
       &:hover {
         color: var(--orange);
+
+        .threat-top__icon {
+          background: var(--orange);
+        }
       }
     }
   }
@@ -221,6 +230,7 @@
     border: 1.5px solid var(--black-main);
     box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.04);
     border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
 
     img {
       transform: rotate(180deg);
