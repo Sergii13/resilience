@@ -83,6 +83,9 @@
     gap: 16px 25px;
     margin-top: 52px;
     flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      margin-top: 32px;
+    }
   }
 
   &__button {
@@ -99,9 +102,12 @@
     }
     @media (max-width: $tablet) {
       margin-right: -110px;
+      padding: 10px;
+      border-radius: 8.70175px;
     }
     @media (max-width: $mobile) {
       margin-right: -60px;
+      border-radius: 4.03921px;
     }
 
   }

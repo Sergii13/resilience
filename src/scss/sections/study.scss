@@ -1,10 +1,7 @@
 .study {
   padding: 75px 0;
   @media (max-width: $tablet) {
-    padding: 40px 0;
-  }
-  @media (max-width: $mobile) {
-    padding: 30px 0;
+    padding: 65px 0;
   }
 
   &.dark {
@@ -19,11 +16,14 @@
     padding: 100px;
     position: relative;
     @media (max-width: $tablet) {
-      padding: 80px 40px;
+      padding: 60px 40px;
     }
     @media (max-width: $mobile) {
-      padding: 40px 20px;
+      padding: 50px 32px;
+      margin: 0 -30px;
+      border-radius: 0px;
     }
+
   }
 
   &__decor {
@@ -35,9 +35,11 @@
       right: -174px;
       top: -48px;
       @media (max-width: $mobile) {
-        width: 200px;
-        top: -20px;
-        right: -134px;
+        width: 300px;
+        right: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 137px);
       }
     }
   }
@@ -49,7 +51,7 @@
     gap: 20px;
     @media (max-width: $mobile) {
       flex-direction: column;
-      align-items: flex-start;
+      gap: 24px;
     }
   }
 
@@ -58,6 +60,9 @@
     line-height: math.div(30, 24);
     letter-spacing: -0.02em;
     color: var(--white);
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   &__link {
@@ -70,6 +75,13 @@
     background: var(--light-green);
     flex-shrink: 0;
     transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $tablet) {
+      width: 78px;
+      border-radius: 50px;
+      img {
+        transform: rotate(-45deg);
+      }
+    }
 
     &:hover {
       background: var(--orange);

@@ -4,31 +4,94 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
+.input-item {
+  position: relative;
+
+  &.fill-input {
+    .input-item__label {
+      //left: 0;
+      //top: -5px;
+      //transform: translateY(-100%);
+      //font-size: 18px;
+      //@media (max-width: $pc) {
+      //  font-size: 14px;
+      //}
+      opacity: 0;
+    }
+  }
+
+  &._form-focus {
+    .input-item__label {
+      //left: 0;
+      //top: -2px;
+      //transform: translateY(-100%);
+      //font-size: 18px;
+      //@media (max-width: $pc) {
+      //  font-size: 14px;
+      //}
+      opacity: 0;
+    }
+  }
+
+  &__label {
+    color: var(--gray);
+    position: absolute;
+    pointer-events: none;
+    left: 24px;
+    font-family: var(--font-allianz);
+    top: 16px;
+    line-height: math.div(24, 16);
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  }
+}
+
 .input {
-	border-radius: 0 !important;
-	width: 100%;
-	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._form-focus {
-	}
-	&._form-error {
-	}
+  width: 100%;
+  display: block;
+  background: rgba(240, 237, 235, 0.25);
+  border: 1px solid rgba(18, 18, 18, 0.25);
+  border-radius: 60px;
+  height: 56px;
+  padding: 10px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black-main);
+  font-family: var(--font-allianz);
+  transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+  &._form-focus {
+    outline: none;
+    background: rgba(240, 237, 235, 1);
+    border: 1px solid rgba(18, 18, 18, 1);
+  }
+
+  &.fill-input {
+    background: rgba(240, 237, 235, 1);
+    border: 1px solid rgba(18, 18, 18, 1);
+  }
+
+  &._form-error {
+  }
 }
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
-	}
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+  resize: none;
+  padding: 16px 24px;
+  height: 270px;
+  border-radius: 30px;
 }

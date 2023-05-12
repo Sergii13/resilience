@@ -105,6 +105,25 @@ function initSliders() {
       on: {},
     });
   }
+  if (document.querySelector(".elem__slider")) {
+    mySwiper = new Swiper(".elem__slider", {
+      modules: [Navigation, Pagination, Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 60,
+      speed: 800,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".elem__pagination",
+      },
+      on: {},
+    });
+  }
   if (document.querySelector(".team2__slider")) {
     mySwiper = new Swiper(".team2__slider", {
       modules: [Navigation, Grid, Manipulation],
@@ -142,6 +161,56 @@ function initSliders() {
       },
     });
   }
+  if (document.querySelector(".nomics__slider")) {
+    mySwiper = new Swiper(".nomics__slider", {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 38,
+      speed: 800,
+      navigation: {
+        prevEl: ".nomics__prev",
+        nextEl: ".nomics__next",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        600: { slidesPerView: 2 },
+        991: {
+          slidesPerView: 3,
+        },
+        1100: {
+          spaceBetween: 38,
+        },
+      },
+      on: {},
+    });
+  }
+  if (document.querySelector(".podcast__slider")) {
+    mySwiper = new Swiper(".podcast__slider", {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 30,
+      speed: 800,
+      navigation: {
+        prevEl: ".podcast__prev",
+        nextEl: ".podcast__next",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        600: { slidesPerView: 2 },
+        991: {
+          slidesPerView: 3,
+        },
+        1100: {
+          spaceBetween: 30,
+        },
+      },
+      on: {},
+    });
+  }
 }
 
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
@@ -174,34 +243,36 @@ function initSlidersScroll() {
   }
 }
 
-// const breakpoint = window.matchMedia("(max-width:768px)");
-// let mySwiper;
-// const breakpointChecker = function () {
-//   if (breakpoint.matches === true) {
-//     if (mySwiper !== undefined) mySwiper.destroy(true, true);
-//
-//     return;
-//   } else if (breakpoint.matches === false) {
-//     return enableSwiper();
-//   }
-// };
-// const enableSwiper = function () {
-//   if (document.querySelector(".brand__slider")) {
-//     mySwiper = new Swiper(".history__thumb", {
-//       modules: [Navigation],
-//       observer: true,
-//       observeParents: true,
-//       slidesPerView: 1,
-//       spaceBetween: 0,
-//       autoHeight: true,
-//       speed: 800,
-//       on: {},
-//     });
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-//
-// breakpointChecker();
+const breakpoint = window.matchMedia("(min-width:991px)");
+let mySwiperInfo;
+const breakpointChecker = function () {
+  if (breakpoint.matches === true) {
+    if (mySwiperInfo !== undefined) mySwiperInfo.destroy(true, true);
+
+    return;
+  } else if (breakpoint.matches === false) {
+    return enableSwiper();
+  }
+};
+const enableSwiper = function () {
+  if (document.querySelector(".info__wrap")) {
+    mySwiperInfo = new Swiper(".info__wrap", {
+      modules: [Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 800,
+      pagination: {
+        el: ".info__pagination",
+      },
+      on: {},
+    });
+  }
+};
+breakpoint.addListener(breakpointChecker);
+
+breakpointChecker();
 
 window.addEventListener("load", function (e) {
   // Запуск ініціалізації слайдерів

@@ -11,10 +11,7 @@
     margin-bottom: 100px;
     text-align: center;
     @media (max-width: $tablet) {
-      margin-bottom: 80px;
-    }
-    @media (max-width: $mobile) {
-      margin-bottom: 30px;
+      margin-bottom: 34px;
     }
   }
 
@@ -29,12 +26,12 @@
 
     .swiper-slide {
       width: 200px !important;
-      height: 87px !important;
       display: flex;
       align-items: center;
       justify-content: center;
+
       @media (max-width: $mobile) {
-        width: 150px !important;
+        width: 160px !important;
       }
     }
   }

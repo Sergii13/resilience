@@ -1,10 +1,10 @@
 .compare2 {
   padding: 105px 0 75px;
   @media (max-width: $tablet) {
-    padding: 40px 0;
+    padding: 65px 0;
   }
   @media (max-width: $mobile) {
-    padding: 30px 0;
+    padding-bottom: 80px;
   }
 
   &__head {
@@ -13,9 +13,7 @@
     gap: 60px;
     color: var(--gray);
     @media (max-width: $tablet) {
-      gap: 30px;
-    }
-    @media (max-width: $mobile) {
+      gap: 24px;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -23,10 +21,10 @@
     &:not(:last-child) {
       margin-bottom: 84px;
       @media (max-width: $tablet) {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
       @media (max-width: $mobile) {
-        margin-bottom: 40px;
+        margin-bottom: 36px;
       }
     }
   }
@@ -38,7 +36,7 @@
   &__title {
     width: percent(466, 1078);
     flex-shrink: 0;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 100%;
     }
   }
@@ -59,6 +57,10 @@
       gap: 30px;
     }
     @media (max-width: $tablet) {
+      gap: 24px;
+    }
+    @media (max-width: $mobile) {
+      gap: 50px;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -72,8 +74,22 @@
     justify-content: center;
     position: relative;
     margin-top: 54px;
+    @media (max-width: $tablet) {
+      margin-top: 60px;
+    }
     @media (max-width: $mobile) {
-      margin-top: 40px;
+      position: relative;
+      &::after {
+        content: '';
+        width: 1px;
+        background: var(--tan);
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        height: 800px;
+        z-index: -1;
+      }
     }
   }
 
@@ -87,8 +103,11 @@
       left: 50%;
       width: 886px;
       transform: translateX(-50%);
+      @media (max-width: $tablet) {
+        width: 460px;
+      }
       @media (max-width: $mobile) {
-        width: 102vw;
+        display: none;
       }
     }
   }
@@ -104,16 +123,16 @@
   border-radius: 8px;
   padding: 80px 40px;
   overflow: hidden;
-  @media (max-width: $mobile) {
-    padding: 50px 20px;
+  @media (max-width: $tablet) {
+    padding: 40px 20px;
   }
 
   &_dark {
     background: var(--charcoal);
     padding: 94px 40px;
     position: relative;
-    @media (max-width: $mobile) {
-      padding: 50px 20px;
+    @media (max-width: $tablet) {
+      padding: 40px 20px;
     }
 
     &::before {
@@ -126,10 +145,8 @@
       height: 100%;
       border: 1.5px solid var(--black);
       pointer-events: none;
-      @media (max-width: $mobile) {
-        width: calc(100% - 20px);
-        top: 15px;
-        left: 10px;
+      @media (max-width: $tablet) {
+        display: none;
       }
     }
 
@@ -150,6 +167,9 @@
 
     .item-compare2__title {
       border-bottom: 1px solid var(--black);
+      @media (max-width: $mobile) {
+        padding-bottom: 12px;
+      }
 
       h4 {
         display: inline-block;
@@ -158,9 +178,14 @@
         padding: 14.5px 32px;
         background: var(--white);
         border-radius: 90px;
-        @media (max-width: $mobile) {
-          padding: 10px 24px;
+        @media (max-width: $tablet) {
+          padding: 17.5px 32px;
+          width: 100%;
         }
+        @media (max-width: $mobile) {
+          padding: 15.5px 12px;
+        }
+
       }
     }
   }
@@ -171,16 +196,17 @@
     &_1 {
       bottom: 0;
       left: 0;
-      @media (max-width: $mobile) {
-        width: 100px;
+      @media (max-width: $tablet) {
+        width: 60px;
       }
     }
 
     &_2 {
       top: 0;
       right: 0;
-      @media (max-width: $mobile) {
-        width: 200px;
+      @media (max-width: $tablet) {
+        width: 100px;
+        right: 20%;
       }
     }
   }
@@ -193,6 +219,10 @@
     letter-spacing: -0.02em;
     position: relative;
     z-index: 2;
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      text-align: center;
+    }
   }
 
   &__content {
@@ -203,6 +233,9 @@
     color: var(--gray);
     position: relative;
     z-index: 2;
+    @media (max-width: $tablet) {
+      padding-top: 20px;
+    }
 
     ul {
       li {
@@ -218,14 +251,11 @@
 
         &:not(:last-child) {
           margin-bottom: 36px;
+          @media (max-width: $tablet) {
+            margin-bottom: 20px;
+          }
         }
       }
     }
   }
-}
-
-.decor {
-}
-
-.button-primary {
 }

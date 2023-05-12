@@ -134,6 +134,16 @@
     }
 
   }
+
+  .stay-card {
+    @media (max-width: $tablet) {
+      width: calc(50% - 10px);
+      flex-shrink: 0;
+    }
+    @media (max-width: em(600)) {
+      width: 100%;
+    }
+  }
 }
 
 .stay-main {
@@ -208,14 +218,7 @@
   border: 1px solid var(--tan);
   border-radius: 8px;
   overflow: hidden;
-  @media (max-width: $tablet) {
-    width: calc(50% - 10px);
-    flex-shrink: 0;
-  }
-  @media (max-width: em(600)) {
-    width: 100%;
 
-  }
 
   &__image-ibg {
     height: 220px;

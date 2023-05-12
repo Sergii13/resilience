@@ -61,3 +61,22 @@
     }
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+
+  .swiper-pagination-bullet {
+    opacity: 0.5;
+    width: 13px;
+    height: 13px;
+    background: var(--black-main);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}

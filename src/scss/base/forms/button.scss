@@ -11,6 +11,9 @@
   border: 1px solid var(--black-main);
   background: var(--light-green);
   transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+  @media (max-width: $tablet) {
+    padding: 17px 32px;
+  }
   @media (any-hover: hover) {
     &:hover {
       background: var(--orange);

@@ -1,0 +1,158 @@
+.nomics {
+  padding: 150px 0;
+  background: var(--grey-100);
+  position: relative;
+  @media (max-width: $tablet) {
+    padding: 100px 0 74px;
+  }
+  @media (max-width: $mobile) {
+    padding: 60px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $tablet) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__head-left {
+    max-width: 600px;
+    @media (max-width: $tablet) {
+      max-width: 425px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    font-family: var(--font-allianz);
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+
+    &_1 {
+      top: 0;
+      right: 0;
+      width: 360px;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_3 {
+      top: 72px;
+      left: 0;
+      width: 1360px;
+      @media (max-width: $pc) {
+        right: 212px;
+        left: auto;
+      }
+      @media (max-width: 1350px) {
+        right: auto;
+        width: 900px;
+        top: 40px;
+        left: 0;
+      }
+      @media (max-width: $tablet) {
+        width: 900px;
+        left: auto;
+        right: 140px;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+
+    }
+
+    &_2 {
+      bottom: 27px;
+      width: 1730px;
+      right: 157px;
+
+      &.reverse {
+        width: 1250px;
+        right: -170px;
+        transform: rotate(180deg);
+        @media (max-width: $pc) {
+          right: auto;
+          left: 200px;
+        }
+        @media (max-width: $tablet) {
+          left: 100px;
+        }
+        @media (max-width: $mobile) {
+          left: 20px;
+        }
+
+      }
+
+      @media (max-width: $pc) {
+        width: 1230px;
+      }
+      @media (max-width: $mobile) {
+        right: 26px;
+      }
+
+    }
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  &__arrows {
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $tablet) {
+      margin-top: 80px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 50px;
+    }
+  }
+
+  &__prev {
+  }
+
+  &__next {
+  }
+
+  &__slider {
+  }
+}
+

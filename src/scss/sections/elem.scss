@@ -24,6 +24,10 @@
     @media (max-width: $tablet) {
       flex-direction: column;
       gap: 30px;
+      text-align: center;
+    }
+    @media (max-width: $mobile) {
+      text-align: left;
     }
   }
 
@@ -37,8 +41,8 @@
   &__title {
     &:not(:last-child) {
       margin-bottom: 40px;
-      @media (max-width: $mobile) {
-        margin-bottom: 30px;
+      @media (max-width: $tablet) {
+        margin-bottom: 24px;
       }
     }
   }
@@ -55,7 +59,7 @@
     &:not(:last-child) {
       margin-bottom: 100px;
       @media (max-width: $tablet) {
-        margin-bottom: 60px;
+        margin-bottom: 55px;
       }
     }
 
@@ -65,7 +69,7 @@
     display: grid;
     gap: 50px;
     @media (max-width: $tablet) {
-      gap: 30px;
+      display: none;
     }
   }
 
@@ -74,9 +78,7 @@
     flex-shrink: 0;
     overflow: hidden;
     @media (max-width: $tablet) {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
+      display: none;
     }
   }
 
@@ -124,6 +126,51 @@
   }
 }
 
+.elem {
+  &__slider {
+    @media (min-width: $tablet) {
+      display: none !important;
+    }
+  }
+
+  &__pagination {
+    margin-top: 60px;
+  }
+}
+
+
+.elem-card {
+  text-align: center;
+
+  &__image {
+    max-width: 524px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+      @media (max-width: $mobile) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.elem-item {
+  &__head {
+  }
+
+  &__icon {
+  }
+
+  &__text {
+  }
+}
 
 @keyframes slide-top {
   0% {

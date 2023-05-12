@@ -1,19 +1,41 @@
 .pagging {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// .pagging__arrow
-	&__arrow {
-	}
-	// .pagging__list
-	&__list {
-		display: flex;
-		li {
-		}
-	}
-	// .pagging__item
-	&__item {
-		&._active {
-		}
-	}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  ul {
+    display: flex;
+
+    li {
+      a {
+        line-height: math.div(24, 16);
+        font-family: var(--font-allianz);
+        letter-spacing: 1.3em;
+        color: #61665D;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+        @media (hover: hover) {
+          &:hover {
+            color: var(--black-main);
+          }
+        }
+
+        &.active {
+          color: var(--black-main);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    &_prev {
+    }
+
+    &_next {
+      img {
+        transform: rotate(180deg)
+      }
+    }
+  }
 }

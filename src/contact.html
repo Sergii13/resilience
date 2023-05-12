@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Contacts"
+})
+<body>
+<div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page page_gray">
+        <section class="contact">
+            <div class="contact__decor contact__decor_1 decor">
+                <svg viewBox="0 0 1662 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 401H1631C1647.57 401 1661 387.569 1661 371V31C1661 14.4315 1647.57 1 1631 1H0"
+                          stroke="#D7C9B1"/>
+                </svg>
+                <svg viewBox="0 0 1662 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path data-animate
+                          d="M0 401H1631C1647.57 401 1661 387.569 1661 371V31C1661 14.4315 1647.57 1 1631 1H0"
+                          stroke="#121212"/>
+                </svg>
+            </div>
+            <div class="contact__decor contact__decor_2 decor">
+                <svg viewBox="0 0 971 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M971 1.00009L31 1.00001C14.4315 1.00001 1.00003 14.4314 1.00002 31L1 274C1 290.568 14.4315 304 31 304L971 304"
+                          stroke="#D7C9B1"/>
+                </svg>
+                <svg viewBox="0 0 971 305" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path data-animate
+                          d="M971 1.00009L31 1.00001C14.4315 1.00001 1.00003 14.4314 1.00002 31L1 274C1 290.568 14.4315 304 31 304L971 304"
+                          stroke="#121212"/>
+                </svg>
+            </div>
+            <div class="container">
+                <div class="contact__head">
+                    <h1 class="title title_big contact__title">
+                        Contact Us
+                    </h1>
+                    <div class="contact__description">
+                        <p>Want to get in touch? Please select from the options below so we can connect you with an
+                            expert as soon as possible. </p>
+                    </div>
+                </div>
+                <div class="contact__row">
+                    <div class="contact__decor decor contact__decor_3">
+                        <svg viewBox="0 0 1874 268" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1874 1.00008L31 0.999996C14.4315 0.999995 1 14.4314 1 31L0.999985 237C0.999983 253.568 14.4314 267 31 267L1874 267"
+                                  stroke="#D7C9B1"/>
+                        </svg>
+                        <svg viewBox="0 0 1874 268" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path data-animate="reverse"
+                                  d="M1874 1.00008L31 0.999996C14.4315 0.999995 1 14.4314 1 31L0.999985 237C0.999983 253.568 14.4314 267 31 267L1874 267"
+                                  stroke="#121212"/>
+                        </svg>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon">
+                            <img src="@img/svg/contact01.svg" alt="">
+                        </div>
+                        <h4>File a Claim</h4>
+                        <div class="contact-item__text">
+                            <p>In the event of an emergency claim, you can reach us 24/7: <a
+                                    href="mailto:claims@resilienceinsurance.com">claims@resilienceinsurance.com</a>
+                                or <a href="tel:13027227236"> 1-(302) 722-7236</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon">
+                            <img src="@img/svg/contact02.svg" alt="">
+                        </div>
+                        <h4>Request a demo</h4>
+                        <div class="contact-item__text">
+                            <p>Are you ready to learn more? <br>
+                                Let’s talk about your needs and objectives</p>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" class="contact__form form-contact">
+                    <h2 class="form-contact__title title">
+                        General Inquiries / More Information
+                        <span class="form-contact__decor"></span>
+                    </h2>
+                    <div class="form-contact__body">
+                        <div class="form-contact__grid-layout">
+                            <div class="input-item">
+                                <span class="input-item__label">
+                                    First Name
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                        Last Name
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                              Email Address
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                              Phone Number
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                     Company
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                             Subject
+                                </span>
+                                <input type="text" class="input">
+                            </div>
+                            <div class="input-item">
+                                <span class="input-item__label">
+                                    Enter Your Message
+                                </span>
+                                <textarea class="input"></textarea>
+                            </div>
+                        </div>
+                        <button class="button-primary form-contact__button">
+                            Contact Us
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    @@include('html/_footer.htm',{})
+    @@include('html/_popup.htm',{})
+</div>
+@@include('html/_js.htm',{})
+</body>
+</html>

@@ -4,6 +4,16 @@
     padding-bottom: 90px;
   }
 
+  &_resource {
+    padding: 150px 0;
+    @media (max-width: $tablet) {
+      padding: 80px 0;
+    }
+    @media (max-width: $mobile) {
+      padding: 65px 0;
+    }
+  }
+
   &.pt-75 {
     padding-top: 75px;
     @media (max-width: $tablet) {
@@ -32,10 +42,15 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
     position: relative;
     z-index: 2;
+    justify-content: space-between;
+    @media (max-width: $pc) {
+      gap: 100px;
+      justify-content: center;
+    }
+
     @media (max-width: $tablet) {
       flex-direction: column;
       gap: 17px;
@@ -92,7 +107,7 @@
     &_1 {
       height: 48px;
       bottom: 0;
-      left: 0;
+      left: -40px;
       width: 395px;
       @media (max-width: $tablet) {
         display: none;
@@ -102,7 +117,10 @@
     &_2 {
       width: 571px;
       top: 0;
-      right: 0;
+      left: calc(100% - 420px);
+      @media (max-width: $pc) {
+        left: calc(100% - 320px);
+      }
       @media (max-width: $tablet) {
         display: none;
       }

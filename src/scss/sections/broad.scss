@@ -1,0 +1,261 @@
+.broad {
+  padding: 95px 0 110px;
+  @media (max-width: $pc) {
+    padding: 100px 0 75px;
+  }
+  @media (max-width: $tablet) {
+    padding: 95px 0 65px;
+  }
+  @media (max-width: $mobile) {
+    padding: 65px 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      align-items: flex-start;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+      @media (max-width: $tablet) {
+        margin-bottom: 70px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__head-left {
+    color: var(--gray);
+    max-width: 817px;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      @media (max-width: $mobile) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+    @media (max-width: $pc) {
+      font-size: 18px;
+      max-width: 500px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+
+  &__grid-layout {
+    display: grid;
+    gap: 85px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    @media (max-width: $pc) {
+      gap: 50px 40px;
+    }
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+    @media (max-width: $mobile) {
+      gap: 40px;
+    }
+
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_2 {
+      width: 100px;
+      top: -84px;
+      left: -33px;
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_1 {
+      width: 287px;
+      right: -209px;
+      top: -428px;
+      @media (max-width: $pc) {
+        top: -350px;
+      }
+      @media (max-width: 1100px) {
+        width: 200px;
+        top: -370px;
+        right: -160px;
+      }
+      @media (max-width: $tablet) {
+        width: 150px;
+        top: -270px;
+        right: -100px;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+
+    }
+  }
+}
+
+
+.broad-item {
+  @media (max-width: 1100px) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__cart-img {
+    background: var(--light-green);
+    border: 1.5px solid var(--black-main);
+    border-radius: 8px;
+    height: 415px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    @media (max-width: $pc) {
+      height: 331px;
+    }
+    @media (max-width: 1100px) {
+      height: 276px;
+      max-width: 326px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    img {
+      max-height: 100%
+    }
+  }
+
+  &__content {
+    padding-top: 32px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 32px;
+    position: relative;
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      gap: 16px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+      padding-bottom: 32px;
+    }
+
+    &::after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: var(--tan);
+      position: absolute;
+      width: calc(100% - 100px);
+      @media (max-width: 1100px) {
+        width: 100%;
+
+      }
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: math.div(30, 24);
+    }
+  }
+
+  &__info {
+    font-family: var(--font-allianz);
+
+    p {
+      font-weight: 400;
+      line-height: math.div(24, 16);
+
+    }
+
+    b {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: math.div(24, 18);
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 32px;
+    @media (max-width: 1100px) {
+      padding-top: 24px;
+
+    }
+    @media (max-width: $mobile) {
+      padding-top: 32px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      font-family: var(--font-allianz);
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__title-small {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    @media (max-width: $tablet) {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

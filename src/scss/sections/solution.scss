@@ -1,9 +1,81 @@
 .solution {
   padding: 100px 0 75px;
+  @media (max-width: $pc) {
+    padding: 80px 0 75px;
+  }
   @media (max-width: $tablet) {
-    padding: 80px 0 40px;
+    padding: 40px 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 50px 0 30px;
   }
   position: relative;
+
+  &_cyber {
+    padding: 50px 0 75px;
+    @media (max-width: $tablet) {
+      padding: 130px 0 65px;
+    }
+    @media (max-width: $mobile) {
+      padding: 100px 0 75px;
+    }
+
+    .solution__grid-layout {
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+      }
+      @media (max-width: $mobile) {
+        gap: 32px;
+      }
+    }
+
+    .item-solution {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      justify-content: flex-start;
+      border: 1.5px solid #E2E6E0;
+      @media (hover: hover) {
+        &:hover {
+          border: 1.5px solid var(--black-main);
+        }
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+
+      &__icon-big {
+        flex-shrink: 0;
+        @media (max-width: $tablet) {
+          height: auto;
+        }
+      }
+
+      &__link {
+        @media (max-width: $tablet) {
+          padding: 16px 11px;
+        }
+      }
+
+      &__content {
+        @media (max-width: $tablet) {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          padding: 40px 30px;
+        }
+        @media (max-width: $mobile) {
+          padding: 40px 24px;
+          flex-direction: column;
+          gap: 40px;
+          align-items: flex-start;
+          h4 {
+            font-size: 22px;
+          }
+        }
+
+      }
+    }
+  }
 
   .container {
     max-width: 1288px;
@@ -28,15 +100,13 @@
     justify-content: space-between;
     @media (max-width: $tablet) {
       display: block;
-    }
-    @media (max-width: $mobile) {
       margin-bottom: 60px;
     }
   }
 
   &__head-left {
     @media (max-width: $tablet) {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 
@@ -53,31 +123,44 @@
     font-family: var(--font-allianz);
     font-size: 18px;
     line-height: 160%;
-  }
-
-  &__scroll {
+    @media (max-width: $tablet) {
+      color: var(--gray);
+    }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
   }
 
   &__grid-layout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 38px;
+    gap: 50px;
+    @extend %hidescroll;
+    @media (max-width: $pc) {
+      gap: 40px;
+    }
     @media (max-width: $tablet) {
-      gap: 40px 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 30px;
+      padding: 0 75px;
+      overflow-x: auto;
+      margin: 0 -75px;
+    }
+    @media (max-width: $mobile) {
+      margin: 0;
+      padding: 0;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
     }
   }
 
   &__item {
+
   }
 
   &__button {
     white-space: nowrap;
   }
 }
-
 
 .item-solution {
   background: #FBFAF9;
@@ -90,12 +173,21 @@
   min-height: 431px;
   position: relative;
   @media (max-width: $tablet) {
-    min-height: 282px;
-    width: calc(50% - 15px);
+    min-height: 229px;
+    width: 323px;
+    flex-shrink: 0;
   }
-  @media (max-width: em(600)) {
+  @media (max-width: $mobile) {
     width: 100%;
+    min-height: auto;
+  }
 
+  &:last-child {
+    margin-right: auto
+  }
+
+  &:first-child {
+    margin-left: auto
   }
 
   &:hover {
@@ -108,9 +200,15 @@
   &__icon-big {
     width: 113px;
     height: 113px;
+    @media (max-width: $tablet) {
+      width: 80px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 30px;
+      @media (max-width: $tablet) {
+        margin-bottom: 0;
+      }
     }
   }
 
