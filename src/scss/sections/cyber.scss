@@ -151,6 +151,16 @@
         right: -20px;
       }
     }
+
+    &_5 {
+      width: 717px;
+      top: -84px;
+      right: -203px;
+      z-index: -1;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
   }
 
   &__title {

@@ -3,11 +3,20 @@
   align-items: center;
   justify-content: center;
   gap: 60px;
+  @media (max-width: $mobile) {
+    gap: 24px;
+  }
+  @media (max-width: $mobileSmall) {
+    gap: 16px;
+  }
 
   ul {
     display: flex;
+    justify-content: center;
 
     li {
+      text-align: center;
+
       a {
         line-height: math.div(24, 16);
         font-family: var(--font-allianz);
@@ -29,6 +38,11 @@
   }
 
   &__arrow {
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      padding: 16px;
+    }
+
     &_prev {
     }
 
