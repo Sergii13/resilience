@@ -76,12 +76,23 @@
     }
   }
 
+
   &__wrap {
     padding: 50px 20px;
     background: var(--grey-100);
     border-radius: 16px;
     max-width: 800px;
     margin: 0 auto;
+
+    &.my-100 {
+      margin-top: 100px;
+      @media (max-width: $tablet) {
+        margin-top: 65px;
+      }
+      @media (max-width: $mobile) {
+        margin-top: 40px;
+      }
+    }
 
     ul {
       justify-content: center;

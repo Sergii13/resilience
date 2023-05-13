@@ -1,0 +1,56 @@
+.series {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+      @media (max-width: $mobile) {
+        margin-bottom: 40px;
+      }
+
+      &.mb-100 {
+        margin-bottom: 100px;
+        @media (max-width: $tablet) {
+          margin-bottom: 60px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  &__grid-layout {
+    display: grid;
+    gap: 38px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    @media (max-width: $tablet) {
+      gap: 40px 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      left: -127px;
+      top: 131px;
+      width: 258px;
+    }
+
+    &_2 {
+      width: 686px;
+      top: 213px;
+      left: -127px;
+      @media (max-width: $mobile) {
+        right: 70px;
+        left: auto;
+      }
+    }
+  }
+}

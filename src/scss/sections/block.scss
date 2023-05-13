@@ -10,6 +10,18 @@
     padding-bottom: 130px;
   }
 
+  &_gray {
+    background: #F0EDEB;
+    padding: 83px 0;
+    @media (max-width: $mobile) {
+      padding: 65px 0;
+    }
+
+    .block__right {
+      background: var(--white);
+    }
+  }
+
   &_blog {
     position: relative;
     padding-bottom: 100px;
@@ -87,6 +99,16 @@
     }
   }
 
+  &__title-small {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__content {
     width: percent(810, 1605);
     flex-shrink: 0;
@@ -98,6 +120,8 @@
   }
 
   &__link {
+    color: var(--gray);
+
     &:not(:last-child) {
       margin-bottom: 40px;
     }

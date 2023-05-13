@@ -1,0 +1,64 @@
+.follow {
+  padding: 150px 0;
+  @media (max-width: $pc) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 65px 0;
+  }
+
+  &__wrap {
+    background: var(--grey-100);
+    border-radius: 16px;
+    padding: 50px;
+    position: relative;
+    @media (max-width: $mobile) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      width: 717px;
+      top: -44px;
+      right: -204px;
+      @media (max-width: $tablet) {
+        top: -30px;
+        right: auto;
+        left: 200px;
+      }
+      @media (max-width: $mobile) {
+        left: 80px;
+      }
+
+      &.top-74 {
+        top: 74px;
+        @media (max-width: $tablet) {
+          top: 30px;
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 780px;
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+  }
+
+  &__socials {
+  }
+}
