@@ -133,6 +133,15 @@
 .threat-top {
   text-align: center;
 
+  &.align-left {
+    @media (max-width: $mobile) {
+      text-align: left;
+      .threat-top__text {
+        text-align: left;
+      }
+    }
+  }
+
   &__label {
     position: relative;
     font-size: 26.3513px;
@@ -191,11 +200,33 @@
 
 
   &__title {
+
     &:not(:last-child) {
       margin-bottom: 43px;
       @media (max-width: $mobile) {
         margin-bottom: 30px;
       }
+    }
+  }
+
+  &__text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    font-family: var(--font-allianz);
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+
+    &.gray {
+      color: var(--gray);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
 

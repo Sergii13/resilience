@@ -1,0 +1,142 @@
+.terms {
+  padding: 150px 0;
+  position: relative;
+  @media (max-width: $tablet) {
+    padding: 95px 0 65px;
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &_1 {
+      width: 1250px;
+      left: 0;
+      top: -40px;
+      @media (max-width: 1300px) {
+        right: 100px;
+        left: auto;
+
+      }
+    }
+
+    &_2 {
+      right: 0;
+      top: 0;
+      width: 550px;
+      @media (max-width: $pc) {
+        width: 400px;
+        right: -200px;
+      }
+      @media (max-width: $tablet) {
+        right: -340px;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: math.div(61, 56);
+    text-align: center;
+    letter-spacing: -0.025em;
+    text-transform: capitalize;
+    @media (max-width: $pc) {
+      font-size: 48px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  time {
+    display: block;
+    background: var(--grey-100);
+    border-radius: 16px;
+    padding: 52px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: var(--font-allianz);
+    @media (max-width: $tablet) {
+      padding: 40px 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+      @media (max-width: $tablet) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: underline;
+      @media (hover: hover) {
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+
+    ul li {
+      list-style: disc;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p, ul {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      color: var(--gray);
+      font-family: var(--font-allianz);
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 35px;
+      letter-spacing: -0.02em;
+      margin-top: 100px;
+      @media (max-width: $mobile) {
+        margin-top: 60px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h4 {
+      font-size: 24px;
+      line-height: math.div(30, 24);
+      letter-spacing: -0.02em;
+      margin-top: 40px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+

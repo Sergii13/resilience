@@ -168,6 +168,72 @@
       width: 258px;
       z-index: -1;
     }
+
+    &_7 {
+      width: 600px;
+      z-index: -1;
+      top: -196px;
+      right: -203px;
+      @media (max-width: 1200px) {
+        width: 500px;
+        top: -100px;
+
+      }
+      @media (max-width: $tablet) {
+        top: -40px;
+      }
+      @media (max-width: $mobile) {
+        left: 70px;
+        right: auto;
+      }
+    }
+
+    &_8 {
+      z-index: -1;
+      width: 675px;
+      top: 143px;
+      left: -127px;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_9 {
+      width: 812px;
+      z-index: -1;
+      top: 59px;
+      right: -150px;
+      @media (max-width: $tablet) {
+        width: 600px;
+      }
+      @media (max-width: $mobile) {
+        left: 50px;
+        top: -20px;
+        right: auto;
+        width: 700px;
+      }
+    }
+
+    &_10 {
+      bottom: 153px;
+      left: -127px;
+      width: 258px;
+      z-index: -1;
+    }
+
+    &_11 {
+      bottom: 33px;
+      right: -205px;
+      width: 651px;
+      z-index: -1;
+      @media (max-width: 1200px) {
+        width: 400px;
+
+      }
+      @media (max-width: $mobile) {
+        right: -300px;
+      }
+    }
   }
 
   &__title {

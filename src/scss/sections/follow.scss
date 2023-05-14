@@ -8,6 +8,10 @@
     padding: 65px 0;
   }
 
+  &.pt-0 {
+    padding-top: 0;
+  }
+
   &__wrap {
     background: var(--grey-100);
     border-radius: 16px;
@@ -41,6 +45,17 @@
           top: 30px;
         }
       }
+    }
+
+    &_2 {
+      width: 732px;
+      right: -209px;
+      top: calc(100% + 40px);
+      @media (max-width: $mobile) {
+        right: 100px;
+        top: calc(100% + 20px);
+      }
+
     }
   }
 

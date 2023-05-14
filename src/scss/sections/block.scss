@@ -10,6 +10,13 @@
     padding-bottom: 130px;
   }
 
+  &.pb-100 {
+    padding-bottom: 100px;
+    @media (max-width: $tablet) {
+      padding-bottom: 65px;
+    }
+  }
+
   &_gray {
     background: #F0EDEB;
     padding: 83px 0;
@@ -160,6 +167,10 @@
     font-family: var(--font-allianz);
     max-width: 672px;
 
+    &.fz-18 {
+      font-size: 18px;
+    }
+
     a {
       text-decoration: underline;
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
@@ -186,8 +197,30 @@
 
   }
 
+  &__label {
+
+    span {
+      display: inline-block;
+      font-weight: 400;
+      line-height: math.div(24, 16);
+      color: var(--black);
+      font-family: var(--font-allianz);
+      background: #FFFFFF;
+      border-radius: 3px 0px;
+      padding: 3px 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__title {
     text-transform: capitalize;
+
+    .orange {
+      background: var(--orange);
+    }
 
     &:not(:last-child) {
       margin-bottom: 22px;
