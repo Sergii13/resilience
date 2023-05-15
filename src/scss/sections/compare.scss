@@ -27,7 +27,7 @@
         margin-bottom: 80px;
       }
       @media (max-width: $mobile) {
-        margin-bottom: 30px;
+        margin-bottom: 60px;
       }
     }
   }
@@ -44,17 +44,15 @@
 
     &_1 {
       width: 692px;
-      right: -178px;
+      right: -328px;
       bottom: 20px;
       @media (max-width: $pc) {
         right: auto;
         left: calc(100% - 250px);
       }
       @media (max-width: $mobile) {
-        bottom: -300px;
-        left: calc(0% - 250px);
+        display: none;
       }
-
     }
   }
 
@@ -90,6 +88,9 @@
       height: 60px;
       font-size: 18px;
     }
+    @media (max-width: $tablet) {
+      background: var(--smoke);
+    }
 
     &:last-child {
       border-right: none;
@@ -104,6 +105,9 @@
       margin-right: -30px;
       padding-right: 30px;
 
+    }
+    @media (max-width: $mobile) {
+      display: none;
     }
 
 
@@ -223,3 +227,104 @@
     justify-content: center;
   }
 }
+
+.compare-mob {
+  background: var(--white);
+  @media (min-width: $mobile) {
+    display: none;
+  }
+
+  &__tabs {
+  }
+
+  &__select {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__items {
+  }
+
+  &__spollers {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__spoller-item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__spoller-title {
+    background: var(--smoke);
+    padding: 18px 16px 17px 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+
+    b {
+      font-weight: 700;
+    }
+
+    &._spoller-active {
+      .compare-mob__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1.5px solid var(--black-main);
+    box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+  }
+
+  &__spoller-content {
+  }
+
+  &__spoller-rows {
+    background: #FBFAF9;
+
+  }
+
+  &__spoller-row {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray);
+    font-family: var(--font-allianz);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 20px 24px 14px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--tan);
+    }
+
+    img {
+      width: 22px;
+      flex-shrink: 0
+    }
+  }
+}
+

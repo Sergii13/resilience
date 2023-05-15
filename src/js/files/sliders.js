@@ -120,6 +120,7 @@ function initSliders() {
       loop: true,
       pagination: {
         el: ".elem__pagination",
+        clickable: true,
       },
       on: {},
     });
@@ -140,8 +141,14 @@ function initSliders() {
         nextEl: ".team2__next",
       },
       breakpoints: {
-        320: { slidesPerView: 1, spaceBetween: 45 },
-        768: { spaceBetween: 50 },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 45,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
         991: {
           slidesPerView: 1,
         },
@@ -175,7 +182,7 @@ function initSliders() {
       },
       breakpoints: {
         320: { slidesPerView: 1, spaceBetween: 20 },
-        600: { slidesPerView: 2 },
+        600: { slidesPerView: 2, spaceBetween: 20 },
         991: {
           slidesPerView: 3,
         },
@@ -265,6 +272,7 @@ const enableSwiper = function () {
       speed: 800,
       pagination: {
         el: ".info__pagination",
+        clickable: true,
       },
       on: {},
     });

@@ -36,14 +36,21 @@
       }
     }
 
-    &_2 {
+    &_5 {
+      width: 1573px;
+      right: 200px;
+      top: 237px;
+      @media (max-width: $pc) {
+        top: 209px;
+      }
+
     }
 
     &_3 {
       width: 1249px;
       right: -130px;
       top: -55px;
-      transform: rotate(180deg);
+      transform: rotate(0deg);
       @media (max-width: 1200px) {
         left: 100px;
         right: auto;

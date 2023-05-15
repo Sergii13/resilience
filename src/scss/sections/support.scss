@@ -40,6 +40,9 @@
         width: 1230px;
       }
       @media (max-width: $tablet) {
+        display: none;
+      }
+      @media (max-width: $tablet) {
         right: 260px;
         width: 700px;
       }
@@ -49,6 +52,27 @@
         width: 900px;
       }
 
+    }
+
+    &_3 {
+      top: -66px;
+      width: 1200px;
+      left: -200px;
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_2 {
+      top: -57px;
+      left: -200px;
+      width: 500px;
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
   }
 

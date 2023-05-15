@@ -143,10 +143,17 @@
     }
 
     &_4 {
-      width: 746px;
+      width: 846px;
       bottom: 320px;
-      left: -127px;
+      left: -340px;
       z-index: -1;
+      @media (max-width: $pc) {
+        left: -200px;
+        width: 746px;
+      }
+      @media (max-width: 1400px) {
+        left: -127px;
+      }
       @media (max-width: $tablet) {
         width: 600px;
         left: auto;
@@ -160,8 +167,12 @@
 
     &_5 {
       width: 501px;
-      right: -203px;
+      right: -350px;
       top: 380px;
+      @media (max-width: $pc) {
+        right: -203px;
+      }
+
       @media (max-width: $tablet) {
         width: 300px;
         top: 60%;

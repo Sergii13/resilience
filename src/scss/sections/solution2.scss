@@ -71,14 +71,12 @@
 
   &__text {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 160%;
     font-family: var(--font-allianz);
     width: 50%;
     flex-shrink: 0;
-    @media (max-width: $pc) {
-      font-size: 18px;
-    }
+
     @media (max-width: $tablet) {
       width: 100%;
     }

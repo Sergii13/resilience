@@ -8,6 +8,13 @@
     max-width: 1288px
   }
 
+  &_request {
+    padding-bottom: 150px;
+    @media (max-width: $tablet) {
+      padding-bottom: 130px;
+    }
+  }
+
   &_big {
     .container {
       max-width: 1670px;
@@ -42,7 +49,11 @@
     &_1 {
       width: 552px;
       bottom: -46px;
-      left: -160px;
+      left: -360px;
+      @media (max-width: $pc) {
+        left: -160px;
+      }
+
       @media (max-width: $tablet) {
         width: 300px;
         left: -90px;
@@ -92,6 +103,26 @@
         border-radius: 10px;
         background: var(--white);
         z-index: 2;
+      }
+    }
+
+    &_3 {
+      width: 762px;
+      bottom: -87px;
+      right: -174px;
+      @media (max-width: $tablet) {
+        width: 480px;
+        right: -85px;
+        bottom: -73px;
+      }
+      @media (max-width: $mobile) {
+        left: 166px;
+        right: auto;
+        bottom: -160px;
+        width: 600px;
+      }
+      @media (min-width: $pc) {
+        display: none;
       }
     }
   }

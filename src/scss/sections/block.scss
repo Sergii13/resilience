@@ -17,7 +17,7 @@
     }
   }
 
-  &_gray {
+  &.block_gray {
     background: #F0EDEB;
     padding: 83px 0;
     @media (max-width: $mobile) {
@@ -37,9 +37,11 @@
     }
     @media (max-width: $tablet) {
       padding: 60px 0;
+      margin-bottom: 50px;
     }
     @media (max-width: $mobile) {
       background: transparent;
+      margin-bottom: 0;
     }
 
     .block__row {
@@ -270,5 +272,8 @@
     overflow: hidden;
     padding-bottom: percent(766, 954);
 
+    img {
+      box-shadow: inset 4px 4px 16px rgba(0, 0, 0, 0.02);
+    }
   }
 }

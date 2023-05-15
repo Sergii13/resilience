@@ -1,5 +1,8 @@
 .info {
   padding-bottom: 100px;
+  @media (max-width: $mobile) {
+    padding-bottom: 65px;
+  }
 
   &__test {
     rect {

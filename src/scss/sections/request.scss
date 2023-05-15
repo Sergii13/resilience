@@ -111,15 +111,23 @@
         right: 70px;
       }
       @media (max-width: $tablet) {
-        width: 1000px;
-        top: -345px;
-        right: 402px;
+        display: none;
+      }
+    }
+
+    &_6 {
+      width: 351px;
+      top: -342px;
+      left: -80px;
+      z-index: -1;
+      @media (min-width: $tablet) {
+        display: none;
       }
       @media (max-width: $mobile) {
-        top: calc(-100% + 400px);
-        right: 163px;
+        right: 164px;
+        left: auto;
+        top: -305px;
       }
-
     }
   }
 
@@ -322,6 +330,7 @@
     width: auto;
     margin: 0 -30px;
     border: none;
+    width: 100%;
   }
 
   &__title {

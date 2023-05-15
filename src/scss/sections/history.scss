@@ -53,6 +53,15 @@
       width: 1232px;
     }
 
+    &_4 {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      width: 1249px;
+      right: -656px;
+      top: 0;
+    }
+
     &_1 {
       width: 532px;
       top: -100px;
@@ -204,7 +213,7 @@
 
   &__pagination {
     margin-top: 40px;
- 
+
 
     @media (min-width: $mobile) {
       display: none;

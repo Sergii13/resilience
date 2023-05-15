@@ -1,5 +1,5 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from "./functions.js";
+import { isMobile, removeClasses } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
@@ -101,4 +101,22 @@ function getTimeCodeFromNum(num) {
   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
     seconds % 60
   ).padStart(2, 0)}`;
+}
+
+const allBlock = document.querySelectorAll(".compare-mob__spollers");
+if (allBlock.length > 0) {
+  let selectedIndex = allBlock[0]
+    .closest(".compare-mob__tabs")
+    .querySelector("select").value;
+  if (selectedIndex) {
+    allBlock[selectedIndex].classList.add("active");
+  }
+  document.addEventListener("selectCallback", function (e) {
+    const currentSelect = e.detail.select;
+    if (currentSelect.classList.contains("cyber-select")) {
+      selectedIndex = currentSelect.value;
+      removeClasses(allBlock, "active");
+      allBlock[selectedIndex].classList.add("active");
+    }
+  });
 }

@@ -28,10 +28,29 @@
     z-index: -1;
 
     &_2 {
-      width: 1242px;
+      width: 1000px;
       left: 80px;
       top: 100%;
+      @media (min-width: $mobile) {
+        display: none;
+      }
+      @media (max-width: $mobileSmall) {
+        width: 1242px;
+      }
+    }
+
+    &_3 {
+      width: 540px;
+      top: calc(100% - 100px);
+      right: 91px;
+      @media (max-width: 800px) {
+        width: 500px;
+        top: calc(100% - 70px);
+      }
       @media (min-width: $tablet) {
+        display: none;
+      }
+      @media (max-width: $mobile) {
         display: none;
       }
     }

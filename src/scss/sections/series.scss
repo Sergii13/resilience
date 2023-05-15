@@ -44,9 +44,13 @@
     }
 
     &_2 {
-      width: 686px;
+      width: 1027px;
       top: 213px;
-      left: -127px;
+      right: 780px;
+      @media (max-width: $pc) {
+        right: 700px;
+      }
+
       @media (max-width: $mobile) {
         right: 70px;
         left: auto;

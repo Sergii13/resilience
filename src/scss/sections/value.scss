@@ -47,6 +47,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
+    @media (max-width: $tablet) {
+      gap: 30px 20px;
+    }
   }
 }
 

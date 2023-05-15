@@ -26,15 +26,36 @@
   &__decor {
     position: absolute;
     z-index: -1;
-    width: 1360px;
-    right: 576px;
-    top: -117px;
-    @media (max-width: $pc) {
-      right: 176px;
+
+    &_1 {
+      width: 1360px;
+      right: 576px;
+      top: -117px;
+      @media (max-width: $pc) {
+        right: 176px;
+      }
+      @media (max-width: $mobile) {
+        width: 700px;
+        top: 180px;
+      }
     }
-    @media (max-width: $mobile) {
-      width: 700px;
-      top: 180px;
+
+    &_2 {
+      width: 651px;
+      top: 201px;
+      right: -204px;
+      @media (max-width: 1300px) {
+        width: 400px;
+
+      }
+      @media (max-width: 1100px) {
+        width: 300px;
+        top: 100px;
+
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
   }

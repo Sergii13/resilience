@@ -185,6 +185,16 @@
 
   &__title {
     margin-bottom: 40px;
+
+    a {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (hover: hover) {
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+
     @media (max-width: $tablet) {
       margin-bottom: 24px;
     }
@@ -195,6 +205,10 @@
     line-height: 160%;
     font-family: var(--font-allianz);
     color: var(--gray);
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      color: var(--black-main);
+    }
 
     p {
       @media (max-width: $mobile) {

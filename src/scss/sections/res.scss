@@ -55,8 +55,18 @@
 
     &_3 {
       width: 1250px;
-      left: 140px;
+      right: -200px;
       top: -80px;
+      @media (max-width: $pc) {
+        left: 190px;
+        width: 1400px;
+        right: auto;
+      }
+      @media (max-width: 1500px) {
+        left: 140px;
+        width: 1250px;
+
+      }
       @media (max-width: $tablet) {
         top: -30px;
         left: 100px;

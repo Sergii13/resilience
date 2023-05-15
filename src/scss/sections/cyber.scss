@@ -14,6 +14,16 @@
     }
   }
 
+  &.pt-100 {
+    padding-top: 100px;
+    @media (max-width: $tablet) {
+      padding: 80px 0;
+    }
+    @media (max-width: $mobile) {
+      padding: 65px 0;
+    }
+  }
+
   &.pt-75 {
     padding-top: 75px;
     @media (max-width: $tablet) {

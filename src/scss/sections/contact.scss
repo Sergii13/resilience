@@ -2,6 +2,7 @@
   position: relative;
   padding: 160px 0 190px;
   overflow: hidden;
+  z-index: 0;
   @media (max-width: $pc) {
     padding: 100px 0;
   }
@@ -199,6 +200,7 @@
   border-radius: 0px 0px 16px 0px;
   padding: 100px 140px;
   margin-left: -140px;
+  position: relative;
   @media (max-width: $pc) {
     padding: 100px 130px 138px 130px;
     margin-left: -130px;
@@ -210,6 +212,27 @@
   @media (max-width: $mobile) {
     padding: 60px 40px;
     margin: 0 -30px;
+  }
+
+  &__decor2 {
+    position: absolute;
+    right: -70px;
+    width: 1300px;
+    top: 362px;
+    z-index: -1;
+    @media (max-width: $pc) {
+      right: -48px;
+    }
+    @media (max-width: $tablet) {
+      width: 1071px;
+      top: 657px;
+      right: -45px;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+
   }
 
   &__title {

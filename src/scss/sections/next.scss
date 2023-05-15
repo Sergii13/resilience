@@ -76,7 +76,8 @@
         left: auto;
       }
       @media (max-width: $mobile) {
-        display: none;
+        right: 90px;
+        width: 800px;
       }
 
     }
@@ -134,6 +135,7 @@
     @media (max-width: $tablet) {
       font-size: 24px;
       margin-bottom: 0;
+      max-width: 272px;
     }
     @media (max-width: $mobile) {
       margin-bottom: 40px;

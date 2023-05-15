@@ -65,7 +65,10 @@
     &_3 {
       width: 481px;
       top: -250px;
-      left: -218px;
+      left: -380px;
+      @media (max-width: $pc) {
+        left: -218px;
+      }
       @media (max-width: $tablet) {
         width: 300px;
         left: -150px;
@@ -200,6 +203,11 @@
 
 
   &__title {
+    @media (max-width: $mobile) {
+      br {
+        display: none;
+      }
+    }
 
     &:not(:last-child) {
       margin-bottom: 43px;

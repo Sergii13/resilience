@@ -88,6 +88,7 @@
     overflow: hidden;
     padding-bottom: percent(587, 1620);
     flex-shrink: 0;
+    background: var(--smoke);
     width: 462px;
     @media (max-width: em(1200)) {
       width: percent(285px, 660px);
