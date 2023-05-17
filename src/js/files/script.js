@@ -1,7 +1,4 @@
-// Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile, removeClasses } from "./functions.js";
-// Підключення списку активних модулів
-import { flsModules } from "./modules.js";
 
 const allClickedElem = document.querySelectorAll(".elem-item");
 if (allClickedElem.length > 0) {

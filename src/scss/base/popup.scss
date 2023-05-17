@@ -1,4 +1,4 @@
-body::after {
+.popup-overlay {
   content: "";
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -8,13 +8,14 @@ body::after {
   left: 0;
   opacity: 0;
   transition: opacity 0.8s ease 0s;
-  pointer-events: none;
   z-index: 149;
   backdrop-filter: blur(10px);
+  pointer-events: none;
 }
 
-.popup-show body::after {
+.popup-show .popup-overlay {
   opacity: 1;
+  pointer-events: all;
 }
 
 .popup {
@@ -32,7 +33,7 @@ body::after {
   z-index: 150;
   visibility: visible;
   overflow: auto;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .popup_show .popup__content {
@@ -89,6 +90,7 @@ body::after {
   width: 100%;
   max-width: 600px;
   position: relative;
+  pointer-events: all;
 
   .lock & {
     visibility: visible;

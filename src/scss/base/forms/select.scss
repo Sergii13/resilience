@@ -1,5 +1,4 @@
-// <SELECT>
-// Сніппет (HTML): sel
+
 .select {
   min-width: 0;
   position: relative;
@@ -166,7 +165,7 @@
     }
   }
 
-  // Конструкція додаткових даних
+
   &__row {
     display: inline-flex;
     align-items: center;
@@ -189,7 +188,7 @@
     }
   }
 
-  // Стан селекту
+
   &._select-open {
   }
 
@@ -209,7 +208,7 @@
   }
 }
 
-// Тег
+
 ._select-tag {
   cursor: pointer;
 }
